@@ -71,7 +71,7 @@ spec:
         number: 8081
   ingressClassName: "nginx"
   rules:
-    - host: kubernetes.docker.internal
+    - host: kubernetes.docker.internal # or anything else, just need to add it into host file
     - http:  # incoming request forwarding to internal service
         paths:
           - path: /
