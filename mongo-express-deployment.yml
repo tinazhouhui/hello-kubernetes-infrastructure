@@ -64,11 +64,6 @@ metadata:
   name: mongo-express-ingress
   namespace: em
 spec:
-  defaultBackend:
-    service:
-      name: mongo-express-service
-      port:
-        number: 8081
   ingressClassName: "nginx"
   rules:
     - host: kubernetes.docker.internal # or anything else, just need to add it into host file
