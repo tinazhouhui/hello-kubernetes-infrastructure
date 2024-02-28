@@ -1,7 +1,15 @@
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: em
+  labels:
+    name: em
+---
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mongo-configmap
+  namespace: em
 data:
   database-name: "mongo-service"
   database-url: "mongodb://mongo-service:27017"
